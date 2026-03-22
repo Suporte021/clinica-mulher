@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Medicina Doc</title>
+
+  <style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background: #ccc;
+        font-family: Arial;
+    }
+    header {
+        border: solid 2px black;
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .user {
+        height: 70px;
+        width: 50%;
+        font-size: 22px;
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 10px;
+        border: solid 1px black;
+    }
+    .voltar {
+        height: 70px;
+        width: 50%;
+        border: solid 1px black;
+    }
+    .container{
+        text-align: center;
+    }
+    h1 {
+        margin-top: 10px;
+        font-size: 50px;
+        
+    }
+    p {
+        font-size: 18px;
+        margin: 20px;
+        text-align: left;
+        font-weight: 400;
+        font-family:italic;
+    }
+    .btn {
+        padding: 10px 20px;
+        border: solid 1px black;
+        border-radius: 5px;
+        font-weight: 600;
+        font-size: 15px;
+        transition: 0.4s;
+        cursor: pointer;
+    }
+    .btn:hover{
+        opacity: 0.8;
+        font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+    <header>
+        <div class="user">
+           {{usuario}}
+        </div>
+        <div class="voltar"></div>
+    </header>
+    
+    <div class="container">
+        <h1>Medicina Moderna 🧠</h1>
+
+    <div class="card">
+      <p>
+        A medicina moderna evoluiu drasticamente nas últimas décadas,
+        combinando tecnologia avançada com conhecimento científico profundo.
+        Procedimentos que antes eram impossíveis, hoje salvam milhares de vidas diariamente.
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Médicos, pesquisadores e cientistas trabalham constantemente
+        para descobrir novas formas de tratamento, utilizando inteligência
+        artificial, robótica e análise de dados.
+      </p>
+
+      <p>
+        Em ambientes hospitalares, cada segundo conta.
+        Equipamentos de última geração auxiliam diagnósticos rápidos,
+        aumentando significativamente as chances de recuperação dos pacientes.
+      </p>
+
+      <button class="btn">Explorar mais</button>
+    </div>
+  </div>
+
+</body>
+</html>

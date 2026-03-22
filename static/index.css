@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Yesteryear&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Poppins",sans-serif;
+    background:#f7f4f4;
+}
+
+/* HEADER */
+
+header{
+    
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    position:relative;
+    background:#fec2cd;
+    height:55px;
+    color:white;
+    box-shadow:0px 2px 5px gray;
+    padding:0 15px;
+}
+
+header h1{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:35px;
+    font-family:"Yesteryear",cursive;
+    font-weight:normal;
+}
+
+.box-login{
+    display:flex;
+    align-items:center;
+}
+
+.box-login a{
+    padding:10px 14px;
+    border-radius:5px;
+    background:#fa899d;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:bold;
+    color:white;
+}
+
+/* HERO */
+
+.hero{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+}
+
+.box-img{
+    display:flex;
+    justify-content:center;
+    width:35%;
+}
+
+.box-img img{
+    width:100%;
+    height:auto;
+}
+
+.box-txt{
+    display:flex;
+    flex-direction:column;
+    width:55%;
+    gap:10px;
+}
+
+.box-txt span{
+    color:gray;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    font-size:10px;
+}
+
+.box-txt h2{
+    color:#fa899d;
+    font-size:30px;
+}
+
+.box-txt p{
+    color:gray;
+    font-size:15px;
+}
+
+.btn-hero{
+    background:#fa899d;
+    padding:8px 12px;
+    border-radius:5px;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+    margin-top:10px;
+    font-weight:bold;
+    width:fit-content;
+}
+
+.btn-hero:hover{
+    background:#f65f7a;
+    box-shadow:2px 2px 5px black;
+}
+
+/* ESPECIALIDADES */
+
+.especial{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:95%;
+    margin:auto;
+    flex-wrap:wrap;
+}
+
+.item-box{
+    background:#fec2cd;
+    width:30%;
+    margin:5px;
+    font-size:11px;
+    padding:10px 20px;
+    border-radius:5px;
+    text-align:center;
+    box-shadow:1px 1px 10px white;
+    transition:0.5s;
+}
+
+.item-box:hover{
+    background:#fca7b7;
+    box-shadow:2px 2px 10px gray;
+    border-radius:25px 5px;
+}
+
+/* FOOTER */
+
+footer{
+    margin-top: 20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#fec2cd;
+    height:50px;
+    color:white;
+    font-size:18px;
+    transition:0.5s;
+}
+
+footer:hover{
+    background:#fb879d;
+    font-size:20px;
+    font-weight:bold;
+}
+
+/* BOTÃO WHATS */
+
+.whats{
+    position:fixed;
+    right:10px;
+    bottom:10px;
+}
+
+/* RESPONSIVO */
+
+@media screen and (max-width:700px){
+
+.hero{
+    flex-direction:column-reverse;
+}
+
+.box-img{
+    width:90%;
+}
+
+.box-txt{
+    width:90%;
+    align-items:center;
+    text-align:center;
+}
+
+.item-box{
+    width:90%;
+}
+
+}

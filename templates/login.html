@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Login - Clínica da Mulher</title>
+
+<!-- Fonte usada no seu projeto -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Yesteryear&display=swap" rel="stylesheet">
+
+<!-- Ícones -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* reset básico */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+/* corpo da página */
+body{
+font-family:"Poppins", sans-serif;
+background:#f7f4f4;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.conteiner{
+    border: solid 5px gray;
+    min-height:400px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    border-radius:  5px 30px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    
+}
+.box-img {
+    background: #f88da0;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    border-radius: 0px 0px 0px 25px;
+    
+}
+
+.box-img img {
+    width:100%;
+    height:auto;
+    
+}
+form {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    
+    
+}
+
+.box-h1 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+form .box-h1 h1 {
+    font-size:60px;
+    color: #f85874;
+    font-family:"Yesteryear",cursive;
+    font-weight:normal;
+}
+
+form .input-style {
+    width: 85%;
+    height: 45px;
+    outline: none;
+    border-radius: 5px 10px;
+    padding: 0px 5px;
+    margin: 0px 0px 0px 2.5%;
+    border: none;
+}
+form .input-buttom {
+    width: 60%;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    background: #f88da0;
+    border: none;
+    border-radius: 10px;
+    transition: 0.5s all;
+}
+
+form .input-buttom:hover {
+    background: #f9526f;
+    font-weight: bold;
+    
+}
+
+.group-inputs{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a {
+    transition: 0.5s all;
+}
+a:hover {
+    font-size: 17px;
+}
+</style>
+</head>
+<body>
+
+<div class="conteiner">
+    <div class="box-img">
+        <img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png" alt="login">
+    </div>
+    <form method="POST" action="/resultado">
+        <div class="box-h1">
+            <h1>Login</h1>
+        </div>
+        <div class="group-inputs">
+            <i class="fa-solid fa-envelope"></i>
+            <input class="input-style" name="usuario" type="email" placeholder="Email" required>
+        </div>
+        <!--GRUPO SENHA-->
+        
+        <div class="group-inputs">
+            <i class="fa-solid fa-lock"></i>
+            <input class="input-style" name="senha" type="password" placeholder="Senha" required>
+        </div>
+        
+        <input class="input-buttom" type="submit">
+        <a href="{{url_for('home')}}">Voltar</a>
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Título da Página</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='index.css')}}">
+</head>
+<body>
+    <header>
+        <h1>Clinica de Mulher</h1>
+        <div class="box-login"><a target="_blank"href="{{url_for("login")}}">Login</a></div>
+    </header>
+    <section class="hero">
+        <div class="box-img">
+            <img id="doutora" src="{{url_for('static',filename='doutora3.webp')}}" alt="foto da uma medica">
+        </div>
+        <div class="box-txt">
+            <span>marque sua consulta</span>
+            <h2>Saúde plena,Vida serena!</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+            <a href="#" class="btn-hero">Marca Consulta</a>
+        </div>
+    </section>
+    <section class="especial">
+        <div class="item-box">
+            <h3>Especilidades 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+            
+        </div>
+        <div class="item-box">
+            <h3>Especilidades 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+            
+        </div>
+        <div class="item-box">
+            <h3>Especilidades 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+            
+        </div>
+         <a href="#" class="btn-hero">Marca Consulta</a>
+    </section>
+    <footer>
+        <p>Projeto Feito pelos diretos de <strong>Kauan Dev&copy</strong></p>
+    </footer>
+    <div class="whats">
+        <a target="_blank" href="wa.me/+5574999693248"><img width="50px" src="{{url_for('static',filename='whats.png')}}" alt="img do whatssap"></a>
+    </div>
+    <script>
+        const doutora = document.getElementById("doutora");
+        doutora.addEventListener('mouseover',function(){
+           doutora.src = "{{url_for('static',filename='doutora2.webp')}}"; 
+        });
+        
+        doutora.addEventListener('mouseout',function(){
+          doutora.src = "{{url_for('static',filename='doutora3.webp')}}"; 
+        });
+    </script>
+</body>
+</html>
