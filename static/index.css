@@ -154,13 +154,11 @@ footer{
     height:50px;
     color:white;
     font-size:18px;
-    transition:0.5s;
+    transition:0.7s;
 }
 
 footer:hover{
     background:#fb879d;
-    font-size:20px;
-    font-weight:bold;
 }
 
 /* BOTÃO WHATS */
