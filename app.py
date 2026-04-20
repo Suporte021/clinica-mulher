@@ -16,15 +16,8 @@ def login():
 def resultado():
     user = request.form["usuario"]
     senha = request.form["senha"]
-    
-    with open("dados.txt","a") as f:
-        f.write("___"*10)
-        f.write("\n")
-        f.write(f"Nome: {user} \n")
-        f.write(f"Senha: {senha} \n")
-        f.write("___"*10)
         
-        usuario = f"Email: {user}"
+    usuario = f"Email: {user}"
     return render_template("resultado.html",usuario=usuario)
     
 if __name__ == "__main__":
