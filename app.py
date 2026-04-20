@@ -1,6 +1,11 @@
 from flask import Flask,render_template,request,url_for
+from database import SessionLocal, engine, Base
+from models import User
 
 app = Flask(__name__)
+
+# cria tabela no banco
+Base.metadata.create_all(bind=engine)
 
 @app.route("/")
 def home():
@@ -14,10 +19,19 @@ def login():
     
 @app.route("/resultado",methods=["GET","POST"])
 def resultado():
-    user = request.form["usuario"]
-    senha = request.form["senha"]
+    session = SessionLocal()
+
+    if request.method == "POST":
+        username = request.form["usuario"]
+        password = request.form["senha"]
+
+        user = User(username=username, password=password)
+
+        session.add(user)
+        session.commit()
+
         
-    usuario = f"Email: {user}"
+        usuario = f"Email: {username}"
     return render_template("resultado.html",usuario=usuario)
     
 if __name__ == "__main__":
